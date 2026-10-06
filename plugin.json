@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "payback",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Portable reciprocity instructions that make AI agents respond med samme mynt.",
   "author": {
     "name": "Christian Neverdal"
@@ -19,7 +19,18 @@
           "Respond med samme mynt.",
           "Match how I communicate in this conversation.",
           "Use Payback for this response."
-        ]
+        ],
+        "websiteURL": "https://github.com/flyrev/payback",
+        "supportURL": "https://github.com/flyrev/payback/issues",
+        "privacyPolicyURL": "https://github.com/flyrev/payback/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/flyrev/payback/blob/main/TERMS.md"
+      },
+      "review": {
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "Initial public-ready release of Payback as a skills-only Agent Plugin with always-on installers and portable agent instructions.",
+        "countries": []
       }
     }
   }
