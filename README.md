@@ -69,6 +69,14 @@ This is intentionally separate from the global installer:
 
 No MCP server, API key, or runtime dependency is required.
 
+## Public use
+
+This repository is public. Colleagues do **not** need access to Christian's private ChatGPT plugin to use Payback.
+
+The fastest installation is still the global installer above. The Agent Plugin source is also public and can be installed by compatible hosts directly from this repository/package.
+
+A public ChatGPT Plugin Directory listing is being prepared separately; that directory publication requires OpenAI publisher verification and legal attestations that cannot be delegated to an AI agent.
+
 ## The rule
 
 The canonical contract lives in [PAYBACK.md](PAYBACK.md).
