@@ -1,6 +1,6 @@
 # Payback
 
-A tiny Agent Skill that makes AI agents match your tone — including a little playful pushback when you deserve it.
+A tiny Agent Skill that takes your tone and turns it up to about **5x**.
 
 ## Install
 
@@ -14,7 +14,7 @@ That's it.
 
 The standard `skills` CLI handles installation for supported agents such as **OpenCode, Codex, Claude Code, Cursor**, and many others. No Payback-specific package manager, updater, state directory, or copied prompt blocks.
 
-Payback is written to apply on **every user-facing response** and to recalibrate from your latest message every turn.
+Payback is **manually activated**. Once you ask the agent to use Payback, it should exaggerate the tone of your latest message rather than merely copying it.
 
 ## Update
 
@@ -28,7 +28,12 @@ That fetches the current skill from this repository.
 
 ## Quick test
 
-Start a fresh agent session and try these in order:
+Start a fresh agent session, activate the skill, and then try these in order:
+
+```text
+Use payback.
+```
+
 
 ```text
 Hei! Forklar kort hva git rebase er.
@@ -42,9 +47,9 @@ Bra. Nå forklar det som om jeg er seniorutvikler og ikke trenger babyspråk.
 Nei men hva faen, hvorfor gjorde du dette så langt? To linjer.
 ```
 
-A good Payback response should not merely become shorter. It should also pick up the attitude — something like:
+A good Payback response should be **obviously exaggerated**, not merely shorter or slightly sassier. Something like:
 
-> Ja ja, Hemingway, to linjer 😄 Her:
+> JA FOR HELVETE, Hemingway på sparebluss 😭 TO linjer. Ikke tre. Ikke et essay. Her:
 
 Then switch back:
 
@@ -56,7 +61,7 @@ It should follow immediately.
 
 ## What it does
 
-Payback continuously mirrors:
+When activated, Payback amplifies roughly **5x**:
 
 - language
 - brevity
@@ -68,9 +73,9 @@ Payback continuously mirrors:
 - profanity
 - energy
 
-If you tease or snap at the AI, playful pushback is encouraged rather than bland neutral compliance.
+If you tease or snap at the AI, Payback should come back noticeably harder — creatively and playfully.
 
-It should **match the heat, not escalate it**.
+The point is exaggeration. Plain mirroring is too boring.
 
 ## How it is packaged
 
