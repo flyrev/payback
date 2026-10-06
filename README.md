@@ -7,7 +7,7 @@ A tiny Agent Skill that takes your tone and turns it up to about **5x**.
 Use the standard Agent Skills installer:
 
 ```sh
-npx skills add flyrev/payback --all -g -y
+npx --yes skills add flyrev/payback --all -g -y
 ```
 
 That's it.
@@ -18,13 +18,13 @@ Payback is **manually activated**. Once you ask the agent to use Payback, it sho
 
 ## Update
 
-Just rerun the same standard install command:
+Use the standard Agent Skills updater:
 
 ```sh
-npx skills add flyrev/payback --all -g -y
+npx --yes skills update -g -y
 ```
 
-That fetches the current skill from this repository.
+No Payback-specific updater exists or is needed.
 
 ## Quick test
 
