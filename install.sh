@@ -7,7 +7,7 @@ SOURCE_URL="${PAYBACK_SOURCE_URL:-https://raw.githubusercontent.com/flyrev/payba
 
 usage() {
   cat <<'EOF'
-Payback — make AI agents respond "med samme mynt".
+Payback — install an always-on conversational vibe mirror.
 
 Usage:
   install.sh                 Install globally for supported agents
@@ -62,13 +62,12 @@ install_block() {
 install_global() {
   contract="$1"
 
-  # OpenAI Codex: documented global AGENTS.md location.
   install_block "$HOME/.codex/AGENTS.md" "$contract"
 
-  # GitHub Copilot CLI: documented user-level custom instructions.
-  install_block "$HOME/.copilot/copilot-instructions.md" "$contract"
+  opencode_config="${XDG_CONFIG_HOME:-$HOME/.config}"
+  install_block "$opencode_config/opencode/AGENTS.md" "$contract"
 
-  # Conventional user-level instruction files for these harnesses.
+  install_block "$HOME/.copilot/copilot-instructions.md" "$contract"
   install_block "$HOME/.claude/CLAUDE.md" "$contract"
   install_block "$HOME/.gemini/GEMINI.md" "$contract"
 }
@@ -78,6 +77,7 @@ install_project() {
   contract="$2"
   mkdir -p "$dir"
 
+  # AGENTS.md is used by both Codex and OpenCode.
   install_block "$dir/AGENTS.md" "$contract"
   install_block "$dir/CLAUDE.md" "$contract"
   install_block "$dir/GEMINI.md" "$contract"
@@ -114,4 +114,4 @@ else
   install_project "$target" "$contract"
 fi
 
-echo "Payback installed. AI agents now have an always-on 'med samme mynt' instruction where supported."
+echo "Payback installed. Start a new agent session and change your tone whenever you feel like it."
