@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "payback",
-  "version": "0.2.0",
-  "description": "Portable reciprocity instructions that make AI agents respond med samme mynt.",
+  "version": "0.3.0",
+  "description": "An always-on conversational mirror that continuously matches the user's current vibe.",
   "author": {
     "name": "Christian Neverdal"
   },
@@ -10,15 +10,15 @@
     "com.openai": {
       "interface": {
         "displayName": "Payback",
-        "shortDescription": "Respond med samme mynt",
-        "longDescription": "Match the user's communication mode—language, brevity, formality, directness, technical depth, formatting, humor, slang, emoji, and profanity intensity—without escalating hostility or overriding higher-priority constraints.",
+        "shortDescription": "AI that matches your vibe",
+        "longDescription": "A tiny, playful, always-on conversational style layer. Before each reply, Payback recalibrates from the user's latest message and matches language, brevity, directness, technical depth, energy, humor, slang, emoji, formatting, and profanity intensity.",
         "developerName": "Christian Neverdal",
         "category": "Productivity",
         "capabilities": ["Interactive"],
         "defaultPrompt": [
-          "Respond med samme mynt.",
-          "Match how I communicate in this conversation.",
-          "Use Payback for this response."
+          "Match my vibe throughout this conversation.",
+          "Adapt to how I am talking right now.",
+          "Keep Payback active for every reply."
         ],
         "websiteURL": "https://github.com/flyrev/payback",
         "supportURL": "https://github.com/flyrev/payback/issues",
@@ -29,7 +29,7 @@
         "commerce": false
       },
       "publication": {
-        "release_notes": "Initial public-ready release of Payback as a skills-only Agent Plugin with always-on installers and portable agent instructions.",
+        "release_notes": "Payback 0.3.0 makes the behavior explicitly continuous and always-on, recalibrating from the latest user message before every reply, with a lighter and more playful presentation.",
         "countries": []
       }
     }
