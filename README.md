@@ -6,24 +6,49 @@ Payback is a tiny, always-on instruction layer that makes an agent continuously 
 
 It is deliberately **not a persona**. Think of it as a live conversational mirror: every reply starts by looking at your latest message again.
 
-## Install globally
+## Install in 10 seconds
 
-### macOS / Linux
+### Recommended: always on
+
+If you have Node.js:
+
+```sh
+npx --yes github:flyrev/payback
+```
+
+That's it. Payback installs globally for:
+
+- OpenAI Codex: `~/.codex/AGENTS.md`
+- OpenCode: `~/.config/opencode/AGENTS.md` (or `$XDG_CONFIG_HOME/opencode/AGENTS.md`)
+- GitHub Copilot CLI: `~/.copilot/copilot-instructions.md`
+- Claude Code: `~/.claude/CLAUDE.md`
+- Gemini: `~/.gemini/GEMINI.md`
+
+Start a new agent session after installing. Payback is then ambient instruction context, so you do **not** have to invoke a skill or remember a command on every prompt.
+
+Rerunning the installer updates only the marked Payback block and preserves your other instructions.
+
+### Standard Agent Skill
+
+Payback is also a standard Agent Skill and can be installed with the open skills ecosystem:
+
+```sh
+npx skills add flyrev/payback
+```
+
+The `skills` CLI supports OpenCode, Claude Code, Codex, Cursor, and many other agents.
+
+**Important:** installing the skill makes Payback available to the agent, but a host decides when a skill is loaded. For Payback's intended **always-on** behavior, use the recommended command above.
+
+### No Node.js?
+
+macOS / Linux:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/flyrev/payback/main/install.sh | sh
 ```
 
-This installs Payback into user-level instruction files for:
-
-- OpenAI Codex: `~/.codex/AGENTS.md`
-- GitHub Copilot CLI: `~/.copilot/copilot-instructions.md`
-- Claude-style user instructions: `~/.claude/CLAUDE.md`
-- Gemini-style user instructions: `~/.gemini/GEMINI.md`
-
-The installer is idempotent. Run it again to update Payback without duplicating the block or deleting your other instructions.
-
-### Windows PowerShell
+Windows PowerShell:
 
 ```powershell
 irm https://raw.githubusercontent.com/flyrev/payback/main/install.ps1 | iex
@@ -73,7 +98,7 @@ No MCP server, API key, or runtime dependency is required.
 
 This repository is public. Colleagues do **not** need access to Christian's private ChatGPT plugin to use Payback.
 
-The fastest installation is still the global installer above. The Agent Plugin source is also public and can be installed by compatible hosts directly from this repository/package.
+The fastest installation is `npx --yes github:flyrev/payback`. For a standard skill install instead, use `npx skills add flyrev/payback`.
 
 A public ChatGPT Plugin Directory listing is being prepared separately; that directory publication requires OpenAI publisher verification and legal attestations that cannot be delegated to an AI agent.
 
