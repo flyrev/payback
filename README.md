@@ -54,6 +54,21 @@ Project installation adds or updates a marked Payback block in:
 
 Existing instructions outside the Payback block are preserved.
 
+## Agent Skill / plugin package
+
+Payback is also packaged as an **Agent Plugins 1.0** skills-only plugin:
+
+- `plugin.json` — portable plugin manifest
+- `skills/payback/SKILL.md` — reusable Agent Skill
+- `.codex-plugin/plugin.json` — compatibility manifest for local/older Codex plugin clients
+
+This is intentionally separate from the global installer:
+
+- **Global instructions** make Payback always-on.
+- **The skill/plugin** makes Payback discoverable, portable, and explicitly invokable by compatible agent hosts.
+
+No MCP server, API key, or runtime dependency is required.
+
 ## The rule
 
 The canonical contract lives in [PAYBACK.md](PAYBACK.md).
