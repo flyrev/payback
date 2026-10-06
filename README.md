@@ -37,15 +37,7 @@ Example:
 
 ## What it does
 
-Payback mirrors things like:
-
-- language
-- brevity
-- directness
-- technical depth
-- humor and sarcasm
-- slang and emoji
-- profanity intensity
+Payback mirrors language, brevity, directness, technical depth, humor, sarcasm, slang, emoji, and profanity intensity.
 
 If you tease or snap at the AI, playful pushback is encouraged rather than bland neutral compliance.
 
@@ -53,9 +45,9 @@ It should match the heat, not escalate it.
 
 ## Supported agents
 
-Payback is just a standard Agent Skill. Compatibility is provided by the Agent Skills ecosystem rather than custom Payback integration code.
+Payback is a standard Agent Skill. Compatibility is provided by the Agent Skills ecosystem rather than custom Payback integration code.
 
-The skill itself lives at:
+The skill lives at:
 
 ```text
 skills/payback/SKILL.md
