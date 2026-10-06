@@ -1,10 +1,10 @@
 # Payback
 
-**AI agents should respond _med samme mynt_.**
+**AI agents should match your vibe. Continuously.**
 
-Payback is a tiny, always-on instruction contract that makes an agent adapt to the way you are communicating: language, brevity, formality, directness, technical depth, formatting, humor, slang, emoji, and profanity intensity.
+Payback is a tiny, always-on instruction layer that makes an agent continuously adapt to the way you are communicating: language, brevity, formality, directness, technical depth, energy, formatting, humor, slang, emoji, and profanity intensity.
 
-It is deliberately **not a persona**. It mirrors your communication mode without escalating hostility or overriding safety, accuracy, or higher-priority instructions.
+It is deliberately **not a persona**. Think of it as a live conversational mirror: every reply starts by looking at your latest message again.
 
 ## Install globally
 
@@ -64,8 +64,8 @@ Payback is also packaged as an **Agent Plugins 1.0** skills-only plugin:
 
 This is intentionally separate from the global installer:
 
-- **Global instructions** make Payback always-on.
-- **The skill/plugin** makes Payback discoverable, portable, and explicitly invokable by compatible agent hosts.
+- **Global instructions** make Payback actually always-on: the rule is loaded for every response.
+- **The skill/plugin** makes Payback discoverable and portable. Its skill is intentionally written to apply on every user-facing response, but hosts ultimately control when skills are loaded.
 
 No MCP server, API key, or runtime dependency is required.
 
@@ -83,10 +83,10 @@ The canonical contract lives in [PAYBACK.md](PAYBACK.md).
 
 In one sentence:
 
-> Respond *med samme mynt*: match the user's communication mode, but do not escalate beyond it or violate higher-priority constraints.
+> Before every reply, re-read the latest user message and match its current vibe.
 
 ## Why this shape?
 
 Always-on agent behavior belongs in always-loaded instructions rather than a prompt you have to remember to invoke. Codex loads global `AGENTS.md` instructions, and Copilot CLI supports user-level custom instructions; project-level files make the same contract portable across agent harnesses.
 
-Payback stays intentionally small because an always-on behavior should cost very little context.
+Payback stays intentionally small because an always-on behavior should cost very little context. The fun part is that the tone can change at any time, and Payback should change with it on the next reply.
