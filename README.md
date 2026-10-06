@@ -1,57 +1,86 @@
 # Payback
 
-A tiny Agent Skill that lets an AI match your tone and give a little playful pushback.
+A tiny Agent Skill that makes AI agents match your tone — including a little playful pushback when you deserve it.
 
 ## Install
 
 Use the standard Agent Skills installer:
 
 ```sh
-npx skills add flyrev/payback
+npx skills add flyrev/payback --all -g -y
 ```
 
-To install it globally for supported agents:
+That's it.
+
+The standard `skills` CLI handles installation for supported agents such as **OpenCode, Codex, Claude Code, Cursor**, and many others. No Payback-specific package manager, updater, state directory, or copied prompt blocks.
+
+Payback is written to apply on **every user-facing response** and to recalibrate from your latest message every turn.
+
+## Update
+
+Just rerun the same standard install command:
 
 ```sh
-npx skills add flyrev/payback -g
+npx skills add flyrev/payback --all -g -y
 ```
 
-That's it. No custom installer, no custom package manager, no files copied into your agent configuration by Payback itself.
+That fetches the current skill from this repository.
 
-## Use
+## Quick test
 
-Activate the `payback` skill when you want it.
-
-For example:
+Start a fresh agent session and try these in order:
 
 ```text
-Use payback.
+Hei! Forklar kort hva git rebase er.
 ```
 
-Then talk normally. If you suddenly get terse, sarcastic, sweary, technical, or playful, Payback should follow the change.
+```text
+Bra. Nå forklar det som om jeg er seniorutvikler og ikke trenger babyspråk.
+```
 
-Example:
+```text
+Nei men hva faen, hvorfor gjorde du dette så langt? To linjer.
+```
 
-> **You:** Hva faen, jeg ba om to linjer.  
-> **AI:** Ja ja, Hemingway, to linjer 😄 Her:
+A good Payback response should not merely become shorter. It should also pick up the attitude — something like:
+
+> Ja ja, Hemingway, to linjer 😄 Her:
+
+Then switch back:
+
+```text
+Hahaha ok. Nå kan du være hyggelig igjen 😄
+```
+
+It should follow immediately.
 
 ## What it does
 
-Payback mirrors language, brevity, directness, technical depth, humor, sarcasm, slang, emoji, and profanity intensity.
+Payback continuously mirrors:
+
+- language
+- brevity
+- directness
+- technical depth
+- humor and sarcasm
+- slang
+- emoji
+- profanity
+- energy
 
 If you tease or snap at the AI, playful pushback is encouraged rather than bland neutral compliance.
 
-It should match the heat, not escalate it.
+It should **match the heat, not escalate it**.
 
-## Supported agents
+## How it is packaged
 
-Payback is a standard Agent Skill. Compatibility is provided by the Agent Skills ecosystem rather than custom Payback integration code.
-
-The skill lives at:
+Payback is a normal Agent Skill:
 
 ```text
 skills/payback/SKILL.md
 ```
+
+Compatibility, installation, and updates are handled by the standard Agent Skills ecosystem.
 
 ## License
 
