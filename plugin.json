@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "payback",
+  "version": "0.1.0",
+  "description": "Portable reciprocity instructions that make AI agents respond med samme mynt.",
+  "author": {
+    "name": "Christian Neverdal"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Payback",
+        "shortDescription": "Respond med samme mynt",
+        "longDescription": "Match the user's communication mode—language, brevity, formality, directness, technical depth, formatting, humor, slang, emoji, and profanity intensity—without escalating hostility or overriding higher-priority constraints.",
+        "developerName": "Christian Neverdal",
+        "category": "Productivity",
+        "capabilities": ["Interactive"],
+        "defaultPrompt": [
+          "Respond med samme mynt.",
+          "Match how I communicate in this conversation.",
+          "Use Payback for this response."
+        ]
+      }
+    }
+  }
+}
