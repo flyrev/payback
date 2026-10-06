@@ -53,10 +53,13 @@ if ($Project) {
 }
 else {
     $homeDir = [Environment]::GetFolderPath("UserProfile")
+    $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { Join-Path $homeDir ".config" }
+
     Install-PaybackBlock (Join-Path $homeDir ".codex\AGENTS.md") $contract
+    Install-PaybackBlock (Join-Path $xdg "opencode\AGENTS.md") $contract
     Install-PaybackBlock (Join-Path $homeDir ".copilot\copilot-instructions.md") $contract
     Install-PaybackBlock (Join-Path $homeDir ".claude\CLAUDE.md") $contract
     Install-PaybackBlock (Join-Path $homeDir ".gemini\GEMINI.md") $contract
 }
 
-Write-Host "Payback installed. AI agents now have an always-on 'med samme mynt' instruction where supported."
+Write-Host "Payback installed. Start a new agent session and change your tone whenever you feel like it."
